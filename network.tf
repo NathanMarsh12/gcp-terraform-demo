@@ -12,7 +12,7 @@ resource "google_compute_firewall" "allow_ssh" {
     ports    = ["22"]
   }
 
-  source_ranges = ["52.124.43.137/32"]
+  source_ranges = ["${var.allowed_ssh_ip}/32"]
   target_tags   = ["dev"]
 }
 
